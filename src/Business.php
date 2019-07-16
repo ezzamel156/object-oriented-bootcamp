@@ -6,6 +6,7 @@ use ACME\Users\Person;
 
 class Business
 {
+    const NUMBER = 123;
 
     protected $staff;
 

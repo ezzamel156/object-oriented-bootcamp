@@ -19,7 +19,8 @@ class Person
     public function getAge()
     {
 
-        return $this->age * 365;
+        //return $this->age * 365;
+        return $this->age;
 
     }
 

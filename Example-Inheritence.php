@@ -17,7 +17,7 @@ abstract class Shape
         return $this->color;
     }
 
-    // abstract protected function getArea();
+    abstract protected function getArea();
 
 }
 
@@ -54,7 +54,15 @@ class Triangle extends Shape
 class Circle extends Shape 
 {
 
-    protected $radius = 5;
+    protected $radius;
+
+    public function __construct($radius, $color)
+    {
+
+        parent::__construct($color);
+        $this->radius = $radius;
+
+    }
 
     public function getArea()
     {
@@ -65,4 +73,4 @@ class Circle extends Shape
 
 }
 
-echo (new Circle('green'))->getArea();
+echo (new Circle(5, 'green'))->getColor();
